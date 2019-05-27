@@ -17,7 +17,7 @@ import candao from './dist/candao-module.js'
 ## 方法名、用法（下面每个方法返都回一个promise对象）：
 
 
-## cacheCityName ##
+### cacheCityNam 
 * * *
 ###### 缓存城市名方法
 ###### 每次切换城市或者第一次请求都应调用此方法在服务器上缓存城市名，缓存一次就可以使用了，如果切换过城市而没有缓存当前城市，则用的是上一次的城市名
@@ -47,7 +47,8 @@ cacheCityName(city)
 | serverTime |     服务器时间      | String |
 | status     | 状态 1、成功 ，其他为失败 | String |
 
-## getNearestStore ##
+
+### getNearestStore
 * * *
 ######  获取最近一家门店
 ######  根据经纬度和地址获取最近的一家门店
@@ -87,7 +88,7 @@ getNearestStore(lng, lat, address, businessType)
 | distance  | 门店与传过来的经纬度距离 | Number |
 
 
-## getNearStores ##
+### getNearStores
 ***
 ###### 获取附近门店列表
 ###### 根据经纬度和地址获取最近的门店列表
@@ -127,7 +128,7 @@ getNearestStore(lng, lat, address, businessType)
 | distance  | 门店与传过来的经纬度距离 | Number |
 
 
-## getStoreById ##
+### getStoreById
 ***
 ###### 获取门店信息
 ###### 根据storeId获取门店信息
@@ -168,7 +169,7 @@ getNearestStore(lng, lat, address, businessType)
 
 
 
-## getAddressFromList ##
+### getAddressFromList
 ***
 ###### 根据关键字联想商家白名单地址库
 ###### 例子
@@ -206,7 +207,7 @@ getNearestStore(lng, lat, address, businessType)
 
 
 
-## getLatLngInfo ##
+### getLatLngInfo
 ***
 ###### 根据地址查询经纬度
 ###### 例子
@@ -238,7 +239,7 @@ getNearestStore(lng, lat, address, businessType)
 | lat&lng          | 经纬度  | String |
 
 
-## getAddressByLatLng
+### getAddressByLatLng
 ***
 ###### 根据经纬度获得地址
 ###### 例子
@@ -271,7 +272,7 @@ getNearestStore(lng, lat, address, businessType)
 | streetNumber | 门牌号  | String |
 
 
-## searchAmap
+### searchAmap
 ***
 ###### 高德地图的api 地址联想
 ###### 例子
@@ -293,7 +294,7 @@ searchAmap(city, key)
 [请参阅此链接，高德地图的输入提示](https://lbs.amap.com/api/javascript-api/guide/services/autocomplete)
 
 
-## searchPlace
+### searchPlace
 ###### 商家白名单地址库和高德地址联想
 ###### 调用searchAmap和getAddressFromList方法，得到结果后返回结果，商家地址库在前（不为空），高德联想地址在后
 ###### 例子
