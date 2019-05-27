@@ -2,7 +2,7 @@
 
 ######javascript标签引入方法
 	<script type="text/javascript" src="./dis/candao-iife.js"></script>
-引入后生成一个$candao的变量
+######引入后生成一个$candao的变量
 ######import模块引入方法
 	import candao from './dist/candao-module.js'
 
