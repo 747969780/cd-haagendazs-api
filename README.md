@@ -72,7 +72,8 @@ getNearestStore(lng, lat, address, businessType)
 
 | 参数           |             说明             |   类型   |    默认值    | 是否必传  |
 | :----------- | :------------------------: | :----: | :-------: | :---: |
-| lng&lat      |            经纬度             | Number | undefined | true  |
+| lng          |             经度             | Number | undefined | true  |
+| lat          |             纬度             | Number | undefined | true  |
 | address      |             地址             | String | undefined | true  |
 | businessType | 业务类型 1、外卖 2、自取 3、堂食 4、外卖预约 | Array  | [1,2,3,4] | false |
 
@@ -112,7 +113,8 @@ getNearestStore(lng, lat, address, businessType)
 
 | 参数           |             说明             |   类型   |    默认值    | 是否必传  |
 | :----------- | :------------------------: | :----: | :-------: | :---: |
-| lng&lat      |            经纬度             | Number | undefined | true  |
+| lng          |             经度             | Number | undefined | true  |
+| lat          |             纬度             | Number | undefined | true  |
 | address      |             地址             | String | undefined | true  |
 | businessType | 业务类型 1、外卖 2、自取 3、堂食 4、外卖预约 | Array  | [1,2,3,4] | false |
 
@@ -152,7 +154,8 @@ getNearestStore(lng, lat, address, businessType)
 
 | 参数           |             说明             |   类型   |    默认值    | 是否必传  |
 | :----------- | :------------------------: | :----: | :-------: | :---: |
-| lng&lat      |            经纬度             | Number | undefined | true  |
+| lng          |             经度             | Number | undefined | true  |
+| lat          |             纬度             | Number | undefined | true  |
 | address      |             地址             | String | undefined | true  |
 | businessType | 业务类型 1、外卖 2、自取 3、堂食 4、外卖预约 | Number |     1     | false |
 
@@ -234,7 +237,8 @@ getNearestStore(lng, lat, address, businessType)
 | :--------------- | :--: | :----: |
 | formattedAddress |  地址  | String |
 | district         |  区名  | String |
-| lat&lng          | 经纬度  | String |
+| lng              |  经度  | String |
+| lat              |  纬度  | String |
 
 <br></br>
 ### getAddressByLatLng
