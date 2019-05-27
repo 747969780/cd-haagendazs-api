@@ -1,10 +1,9 @@
 # 文档  #
 
-###### javascript标签引入方法
+###### javascript标签引入方法，引入后生成一个$candao的变量
 ```html
 <script type="text/javascript" src="./dis/candao-iife.js"></script>
 ```
-###### 引入后生成一个$candao的变量
 
 ###### import模块引入方法
 ```javascript
