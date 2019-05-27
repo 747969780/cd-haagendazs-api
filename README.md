@@ -1,5 +1,6 @@
 # 文档  #
 
+<br></br>
 ## 使用方式：
 
 ###### javascript标签引入方法，引入后生成一个$candao的变量
@@ -12,8 +13,7 @@
 import candao from './dist/candao-module.js'
 ```
 
-
-
+<br></br>
 ## 方法名、用法（下面每个方法返都回一个promise对象）：
 
 <br></br>
