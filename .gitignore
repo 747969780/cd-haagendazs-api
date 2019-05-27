@@ -1,0 +1,34 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# npm
+package-lock.json
+
+.DS_Store
+node_modules/
+# projects/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+test/unit/coverage
+test/2e2/reports
+selenium-debug.log
+.vscode
+/.svn
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
