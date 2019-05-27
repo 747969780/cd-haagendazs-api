@@ -1,5 +1,7 @@
 # 文档  #
 
+## 使用方式：
+
 ###### javascript标签引入方法，引入后生成一个$candao的变量
 ```html
 <script type="text/javascript" src="./dis/candao-iife.js"></script>
@@ -12,8 +14,8 @@ import candao from './dist/candao-module.js'
 
 
 
-###方法名、用法
-### 每个方法返都回一个promise对象
+## 方法名、用法（下面每个方法返都回一个promise对象）：
+
 
 ## cacheCityName ##
 * * *
