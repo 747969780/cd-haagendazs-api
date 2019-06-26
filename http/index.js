@@ -148,10 +148,7 @@ const getApi = {
   getAddressByLatLng(lnglat) {
     return new Promise(function(resolve, reject) {
       AMap.plugin('AMap.Geocoder', function() {
-        const geocoder = new AMap.Geocoder({
-          // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
-          city: '010'
-        });
+        const geocoder = new AMap.Geocoder();
         geocoder.getAddress([lnglat.lng, lnglat.lat], function(status, result) {
           if (status === 'complete' && result.info === 'OK') {
             const res = result.regeocode.addressComponent;
