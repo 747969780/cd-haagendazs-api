@@ -7,6 +7,12 @@ const config = {
 }
 
 // 如果没有引入高德地图则引入
-if (window && !window.AMap) $("body").append('<script src="' + "https://webapi.amap.com/maps?v=1.4.14&key=cddcbf0487cd724098a565842602c27f" + '"></script>');
+if (window && !window.AMap) {
+  let url = 'https://webapi.amap.com/maps?v=1.4.14&key=cddcbf0487cd724098a565842602c27f';
+  let jsapi = document.createElement('script');
+  jsapi.charset = 'utf-8';
+  jsapi.src = url;
+  document.head.appendChild(jsapi);
+}
 
 export default config;

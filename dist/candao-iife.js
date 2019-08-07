@@ -9,7 +9,13 @@ var $candao = (function () {
 
 
     // 如果没有引入高德地图则引入
-  };if (window && !window.AMap) $("body").append('<script src="' + "https://webapi.amap.com/maps?v=1.4.14&key=cddcbf0487cd724098a565842602c27f" + '"></script>');
+  };if (window && !window.AMap) {
+    var url = 'https://webapi.amap.com/maps?v=1.4.14&key=cddcbf0487cd724098a565842602c27f';
+    var jsapi = document.createElement('script');
+    jsapi.charset = 'utf-8';
+    jsapi.src = url;
+    document.head.appendChild(jsapi);
+  }
 
   var bind = function bind(fn, thisArg) {
     return function wrap() {
@@ -6743,7 +6749,7 @@ var $candao = (function () {
   }
 
   // Copyright Joyent, Inc. and other Node contributors.
-  var url = {
+  var url$1 = {
     parse: urlParse,
     resolve: urlResolve,
     resolveObject: urlResolveObject,
@@ -8823,7 +8829,7 @@ var $candao = (function () {
     }
   });
 
-  var URL = url.URL;
+  var URL = url$1.URL;
 
   var Writable$1 = Stream.Writable;
   var debug$1 = src("follow-redirects");
@@ -9033,7 +9039,7 @@ var $candao = (function () {
 
     // Create the native request
     var request = this._currentRequest = nativeProtocol.request(this._options, this._onNativeResponse);
-    this._currentUrl = url.format(this._options);
+    this._currentUrl = url$1.format(this._options);
 
     // Set up event handlers
     request._redirectable = this;
@@ -9138,9 +9144,9 @@ var $candao = (function () {
       }
 
       // Perform the redirected request
-      var redirectUrl = url.resolve(this._currentUrl, location);
+      var redirectUrl = url$1.resolve(this._currentUrl, location);
       debug$1("redirecting to", redirectUrl);
-      Object.assign(this._options, url.parse(redirectUrl));
+      Object.assign(this._options, url$1.parse(redirectUrl));
       this._isRedirect = true;
       this._performRequest();
 
@@ -9181,7 +9187,7 @@ var $candao = (function () {
             input = urlToOptions(new URL(urlStr));
           } catch (err) {
             /* istanbul ignore next */
-            input = url.parse(urlStr);
+            input = url$1.parse(urlStr);
           }
         } else {
           callback = options;
@@ -15305,7 +15311,7 @@ var $candao = (function () {
       }
 
       // Parse url
-      var parsed = url.parse(config.url);
+      var parsed = url$1.parse(config.url);
       var protocol = parsed.protocol || 'http:';
 
       if (!auth && parsed.auth) {
@@ -15342,7 +15348,7 @@ var $candao = (function () {
         var proxyEnv = protocol.slice(0, -1) + '_proxy';
         var proxyUrl = process.env[proxyEnv] || process.env[proxyEnv.toUpperCase()];
         if (proxyUrl) {
-          var parsedProxyUrl = url.parse(proxyUrl);
+          var parsedProxyUrl = url$1.parse(proxyUrl);
           proxy = {
             host: parsedProxyUrl.hostname,
             port: parsedProxyUrl.port
@@ -16236,10 +16242,7 @@ var $candao = (function () {
     getAddressByLatLng: function getAddressByLatLng(lnglat) {
       return new Promise(function (resolve, reject) {
         AMap.plugin('AMap.Geocoder', function () {
-          var geocoder = new AMap.Geocoder({
-            // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
-            city: '010'
-          });
+          var geocoder = new AMap.Geocoder();
           geocoder.getAddress([lnglat.lng, lnglat.lat], function (status, result) {
             if (status === 'complete' && result.info === 'OK') {
               var res = result.regeocode.addressComponent;
