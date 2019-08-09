@@ -8,7 +8,7 @@
 <script type="text/javascript" src="./dis/candao-iife.js"></script>
 ```
 
-###### import模块引入方法
+###### Module 模块引入方法
 ```javascript
 import candao from './dist/candao-module.js'
 ```
