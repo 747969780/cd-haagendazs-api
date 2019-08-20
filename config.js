@@ -1,9 +1,11 @@
 'use strict';
 const config = {
-  url: 'http://order.can-dao.com', // 正式url
-  key: 'af45186d2ef020f6', // 正式key
+  // url: 'http://order.can-dao.com', // 正式url
+  // key: 'af45186d2ef020f6', // 正式key
   // url: 'http://qc.can-dao.com:16011', // 测试url
-  // key: 'c0eec99699aa9ce9' // 测试key
+  // key: 'c0eec99699aa9ce9', // 测试key
+  // url: 'http://saasv6_qc.can-dao.com:630',
+  key: '24abc8983006da87'
 }
 
 // 如果没有引入高德地图则引入

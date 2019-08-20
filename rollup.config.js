@@ -6,8 +6,8 @@ import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
 
 export default {
-  input: './index.js',
-  output: [{
+  input: './index.js', // 入口
+  output: [{ // 输出文件
       file: 'dist/candao-iife.js',
       format: 'iife',
       name: '$candao',
@@ -18,8 +18,8 @@ export default {
       name: 'candao',
       sourcemap: true
   }],
-  plugins: [
-    commonjs({
+  plugins: [ // 插件
+    commonjs({ // 针对CommonJS作转换
        // non-CommonJS modules will be ignored, but you can also
        // specifically include/exclude files
        include: 'node_modules/**',  // Default: undefined
@@ -41,8 +41,8 @@ export default {
        // (see below for more details)
        // namedExports: { './module.js': ['foo', 'bar' ] },  // Default: undefined
     }),
-    globals(),
-    builtins(),
+    globals(), // 转换node变量
+    builtins(), // 转换node内置api
     json({
       // All JSON files will be parsed by default,
       // but you can also specifically include/exclude files
