@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript" src="./candao-iife.js"></script>
+  <script type="text/javascript">
+    const printPromise = (p) => { p.then((res) => { console.log(res) }) }
+  </script>
+  <script type="module">
+    import candao from './candao-module.js';
+    console.log('$candao', candao);
+    window.moduleTest = () => {
+      printPromise(candao.getAddressFromList('上海').then((res)=> { console.log(res) }))
+      printPromise(candao.getLatLngInfo('上海', '虹桥'))
+      printPromise(candao.searchPlace('广州', '天'))
+      printPromise(candao.searchAmap('广州', '天'))
+      printPromise(candao.getNearStores(121.313896, 31.196793, '虹桥'))
+    }
+  </script>
+  <script>
+    console.log('$candao', $candao);
+    window.iifeTest = () => {
+      printPromise($candao.getAddressFromList('上海').then((res)=> { console.log(res) }))
+      printPromise($candao.getLatLngInfo('上海', '虹桥'))
+      printPromise($candao.searchPlace('广州', '天'))
+      printPromise($candao.searchAmap('广州', '天'))
+      printPromise($candao.getNearStores(121.313896, 31.196793, '虹桥'))
+    }
+  </script>
+</body>
+</html>
