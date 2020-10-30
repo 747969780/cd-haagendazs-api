@@ -11,6 +11,17 @@ export default {
       file: 'dist/candao-iife.js',
       format: 'iife',
       name: '$candao',
+      globals: {
+        http: "http",
+        https: "https",
+        url: "url",
+        assert: "assert",
+        stream: "stream",
+        tty: "tty",
+        util: "util",
+        os: "os",
+        zlib: "zlib",
+      },
       sourcemap: true
     }, {
       file: 'dist/candao-module.js',
@@ -41,8 +52,12 @@ export default {
        // (see below for more details)
        // namedExports: { './module.js': ['foo', 'bar' ] },  // Default: undefined
     }),
+    resolve({
+      browser: true,
+      preferBuiltins: false,
+    }),
     globals(), // 转换node变量
-    builtins(), // 转换node内置api
+    // builtins(), // 转换node内置api
     json({
       // All JSON files will be parsed by default,
       // but you can also specifically include/exclude files
@@ -63,7 +78,6 @@ export default {
       // generate a named export for every property of the JSON object
       namedExports: true // Default: true
     }),
-    resolve(),
-    babel()
+    babel({ exclude: ['**/node_modules/**'] })
   ]
 };
